@@ -3,12 +3,11 @@ import '../models/user_model.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-
   User? get currentUser => _firebaseAuth.currentUser;
   Stream get authStateChanges => _firebaseAuth.authStateChanges();
   UserModel? _userFromFirebaseUser(User? user) {
     if (user == null) return null;
-    
+
     return UserModel(
       uid: user.uid,
       email: user.email ?? '',

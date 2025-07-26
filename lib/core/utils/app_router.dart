@@ -30,26 +30,22 @@ class AppRouter {
       GoRoute(
         path: '/login',
         name: 'login',
-        builder:
-            (context, state) => LoginScreen(),
+        builder: (context, state) => LoginScreen(),
       ),
       GoRoute(
         path: '/signup',
         name: 'signup',
-        builder:
-            (context, state) => SignUpScreen(),
+        builder: (context, state) => SignUpScreen(),
       ),
       GoRoute(
         path: '/menu',
         name: 'menu',
-        builder:
-            (context, state) => MenuScreen(),
+        builder: (context, state) => MenuScreen(),
       ),
       GoRoute(
         path: '/cart',
         name: 'cart',
-        builder:
-            (context, state) => CartScreen(),
+        builder: (context, state) => CartScreen(),
       ),
       GoRoute(path: '/', redirect: (context, state) => '/menu'),
     ],
